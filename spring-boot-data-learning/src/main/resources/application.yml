@@ -1,8 +1,18 @@
+#数据库、连接池配置
 spring:
   datasource:
     driver-class-name: com.mysql.cj.jdbc.Driver
-    url: jdbc:mysql://localhost:3306/spring_boot_data?serverTimezone=GMT%2B8&characterEncoding=utf-8&useSSL=false
+    url: jdbc:mysql://localhost:3306/spring_boot_data?serverTimezone=UTC&allowMultiQueries=true
     username: root
     password: 123456
+  jackson:
+    date-format: yyyy-MM-dd HH:mm:ss
+    time-zone: GMT+8
 server:
   port: 9090
+
+mybatis:
+  configuration:
+    map-underscore-to-camel-case: true       #配置驼峰映射
+  mapper-locations: classpath:mapper/*.xml   #配置MyBatis的xml配置文件路径
+  type-aliases-package: com.example.domain   #配置XML映射文件中指定的实体类别名路径
