@@ -14,16 +14,19 @@
     <version>0.0.1-SNAPSHOT</version>
     <name>spring-boot-learning</name>
     <description>spring-boot-learning</description>
+
     <modules>
         <module>spring-boot-config-learning</module>
+        <module>spring-boot-data-learning</module>
     </modules>
+
     <!--打包类型：pom jar war-->
     <packaging>pom</packaging>
 
     <!--定义字符集，版本号-->
     <properties>
         <java.version>17</java.version>
-        <lombok.version>1.18.12</lombok.version>
+        <lombok.version>1.18.20</lombok.version>
         <fastjson.version>1.2.83</fastjson.version>
     </properties>
 
@@ -43,7 +46,37 @@
             <artifactId>spring-boot-starter-test</artifactId>
             <scope>test</scope>
         </dependency>
+        <dependency>
+            <groupId>org.springframework.boot</groupId>
+            <artifactId>spring-boot-starter-data-jpa</artifactId>
+        </dependency>
+        <dependency>
+            <groupId>mysql</groupId>
+            <artifactId>mysql-connector-java</artifactId>
+            <version>8.0.32</version>
+        </dependency>
+        <dependency>
+            <groupId>jakarta.servlet</groupId>
+            <artifactId>jakarta.servlet-api</artifactId>
+            <version>6.0.0</version>
+            <scope>provided</scope>
+        </dependency>
+        <dependency>
+            <groupId>org.projectlombok</groupId>
+            <artifactId>lombok</artifactId>
+            <version>1.18.26</version>
+        </dependency>
+        <dependency>
+            <groupId>org.springframework.boot</groupId>
+            <artifactId>spring-boot-starter-thymeleaf</artifactId>
+        </dependency>
+        <dependency>
+            <groupId>com.alibaba</groupId>
+            <artifactId>druid</artifactId>
+            <version>1.1.23</version>
+        </dependency>
     </dependencies>
+
     <!-- 全局管理依赖,并不会引入具体依赖 -->
     <!-- 只是依赖的声明，并不实现引入，因此子项目需要显式声明需要用的依赖，这样做的好处是可以方便进行版本控制 -->
     <dependencyManagement>
@@ -60,16 +93,13 @@
                 <artifactId>fastjson</artifactId>
                 <version>${fastjson.version}</version>
             </dependency>
+            <dependency>
+                <groupId>mysql</groupId>
+                <artifactId>mysql-connector-java</artifactId>
+                <version>${mysql.version}</version>
+                <type>pom</type>
+                <scope>import</scope>
+            </dependency>
         </dependencies>
     </dependencyManagement>
-
-    <build>
-        <plugins>
-            <plugin>
-                <groupId>org.springframework.boot</groupId>
-                <artifactId>spring-boot-maven-plugin</artifactId>
-            </plugin>
-        </plugins>
-    </build>
-
 </project>
