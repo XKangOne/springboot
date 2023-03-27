@@ -25,6 +25,8 @@ public interface DiscussRepository extends JpaRepository<Discuss,Integer> {
     //查询author非空的Discuss评论集合
     List<Discuss> findByAIdEquals(Integer aId);
 
+    List<Discuss>findByAuthorLike(String author);
+
     @Query("SELECT c FROM t_comment c")
     List<Discuss> getDiscussesByPage(Pageable pageable);
 

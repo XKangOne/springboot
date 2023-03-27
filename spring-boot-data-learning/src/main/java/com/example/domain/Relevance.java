@@ -6,11 +6,8 @@ import lombok.Data;
 import lombok.NoArgsConstructor;
 
 /***
- * @description:
+ * @description:为了实现多对多的关系，创建的学生与课程的表
  * @author: yk
- * @date:
- * @param:
- * @return:
  **/
 @Data
 @AllArgsConstructor

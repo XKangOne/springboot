@@ -42,7 +42,6 @@ public interface StudentMapper {
     List<Student> dynamicSelect(Student student);
 
     List<Student> getStudent(Student student);
-
     /**
      * @description 根据主键查询学生信息
      * @param: studentId 学生id

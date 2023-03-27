@@ -34,10 +34,16 @@ class DiscussRepositoryTest {
     }
     //使用JpaRepository 方法名关键字进行查询
     @Test
-    void findByAthor() {
+    void findByAuthor() {
         List<Discuss> list = discussRepository.findByAuthor("张三");
         list.forEach(System.out::println);
     }
+    @Test
+    void findByAuthorLike() {
+        List<Discuss> list = discussRepository.findByAuthorLike("%张%");
+        list.forEach(System.out::println);
+    }
+
     @Test
     void findByAIdEquals(){
         List<Discuss> list= discussRepository.findByAIdEquals(1);
