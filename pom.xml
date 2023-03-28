@@ -18,6 +18,7 @@
     <modules>
         <module>spring-boot-config-learning</module>
         <module>spring-boot-data-learning</module>
+        <module>spring-boot-filter-interceptor</module>
     </modules>
 
     <!--打包类型：pom jar war-->

@@ -1,0 +1,6 @@
+GET http://localhost:8888/fistServlet
+Accept: application/json
+
+###
+GET http://localhost:8888/api/request
+Accept: application/json

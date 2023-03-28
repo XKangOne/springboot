@@ -5,9 +5,6 @@ import com.example.domain.Clazz;
 /***
  * @description:
  * @author: yk
- * @date:
- * @param:
- * @return:
  **/
 public interface ClazzMapper {
 
