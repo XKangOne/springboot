@@ -1,0 +1,14 @@
+web:
+#  定义路径
+  upload-path: D:\Git\upload\
+spring:
+  resources:
+    static-locations: classpath:/static/,file:$(web.upload-path)
+  servlet:
+    multipart:
+      max-file-size: 10485760 #请求的文件大小限制为10MB
+      max-request-size: 10485760
+minio:
+  endPoint: http://43.137.12.232:9000
+  accessKey: admin
+  secretKey: 12345678

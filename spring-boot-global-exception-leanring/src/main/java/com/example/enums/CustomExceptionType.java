@@ -1,14 +1,16 @@
 package com.example.enums;
 
 import com.example.consts.Consts;
+import com.example.consts.MsgConsts;
 import lombok.Getter;
 
 /***
  * @description: 异常类型枚举
- * 枚举默认是私有
+ * 枚举类型默认是私有
  **/
 @Getter
 public enum CustomExceptionType {
+    //定义的枚举类型都是和业务相关的异常
     PARAM_ERROR(Consts.CODE_400, Consts.PARAM_ERROR),
     UNAUTHORIZED_ERROR(Consts.CODE_401, Consts.UNAUTHORIZED_ERROR),
     FORBIDDEN_ERROR(Consts.CODE_403, Consts.FORBIDDEN_ERROR),

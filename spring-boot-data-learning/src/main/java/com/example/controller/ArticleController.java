@@ -15,9 +15,6 @@ import java.util.Optional;
 /***
  * @description:
  * @author: yk
- * @date:
- * @param:
- * @return:
  **/
 @Controller
 @AllArgsConstructor
@@ -33,7 +30,6 @@ public class ArticleController {
     public String articleDetail(@RequestParam(value = "id",required = false) Integer id,ModelMap map){
         Optional<Article> articleOptional = articleRepository.findById(id);
         Optional<Discuss> byId = discussRepository.findById(id);
-
 //        boolean present = articleOptional.isPresent();
 //        if (present){
 //            Article article = articleOptional.get();

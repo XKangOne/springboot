@@ -12,9 +12,6 @@ import java.util.List;
 /***
  * @description:
  * @author: yk
- * @date:
- * @param:
- * @return:
  **/
 public interface DiscussRepository extends JpaRepository<Discuss,Integer> {
     //查询author 非空的 Discuss 评论集合

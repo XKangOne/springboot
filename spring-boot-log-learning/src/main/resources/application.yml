@@ -1,0 +1,10 @@
+logging:
+  level:
+    root: info
+    com.example.controller: debug
+  file:
+    path: E:\SpringBoot\logs
+    name: E:\SpringBoot\logs\boot.log
+  pattern:
+    console: '%red(%d{yyyy-MM-dd HH:mm:ss}) %green([%thread]) %highlight(%-5level) %boldMagenta(%logger{10}) - %cyan(%msg%n)'
+    file:  '%d{yyyy-MM-dd HH:mm:ss.SSS} %-5level [%thread] %logger : %msg%n'

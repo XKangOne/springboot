@@ -2,7 +2,6 @@ package com.example.boot.config;
 
 import com.example.boot.service.MyService;
 import org.springframework.context.annotation.Bean;
-import org.springframework.context.annotation.Configuration;
 /***
  * @description: 使用 @Configuration 编写自定义配置类
  * @author: yk

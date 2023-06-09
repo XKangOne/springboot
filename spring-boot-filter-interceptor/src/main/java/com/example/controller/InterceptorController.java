@@ -9,9 +9,6 @@ import org.springframework.web.bind.annotation.ResponseBody;
 /***
  * @description:
  * @author: yk
- * @date:
- * @param:
- * @return:
  **/
 @Controller
 @RequestMapping("api")

@@ -1,0 +1,21 @@
+#给应用起名字 可以在首页看到
+spring:
+  application:
+    name: server-push
+  boot:
+    admin:
+      client:
+        url: http://localhost:8989
+#端点的health
+management:
+  endpoint:
+    health:
+      show-details: always
+#端点的暴露
+  endpoints:
+    web:
+      exposure:
+        include: '*'
+    enabled-by-default: 'true'
+server:
+  port: 8001

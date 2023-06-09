@@ -1,0 +1,21 @@
+spring:
+  application:
+    name: spring-boot-actuator
+  boot:
+    admin:
+      client:
+        url: http://localhost:8989
+management:
+  endpoints:
+    web:
+      exposure:
+#        所有信息
+        include: '*'
+  endpoint:
+    health:
+      show-details: always
+#多环境配置
+#spring:
+#  profiles:
+#    active: dev
+

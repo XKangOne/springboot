@@ -28,6 +28,5 @@ public class Person {
     private String[] family;
     private Map map;
     private  Pet pet;
-    
 }
 

@@ -9,7 +9,7 @@ import org.jsoup.select.Elements;
  * @description:JsoupUtils 简单的Java爬虫
  * @author: yk
  **/
-public class JsoupUtils {
+public class  JsoupUtils {
     public static void main(String[] args) throws Exception {
         getList("https://blog.csdn.net/xingyu_qie/category_2378953.html");
     }

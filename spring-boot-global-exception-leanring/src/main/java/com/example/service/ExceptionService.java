@@ -15,19 +15,21 @@ import java.util.List;
 @Service
 public class ExceptionService {
     //服务器，模拟系统异常
-//    public void systemBizError(){
+    public void systemBizError(){
 //        throw new CustomException(CustomExceptionType.SYSTEM_ERROR, MsgConsts.PARAM_ERROR);
-//    }
+        throw new CustomException(CustomExceptionType.SYSTEM_ERROR);
+    }
     //服务器,模拟未认证异常
     public void authError(){
         throw new CustomException(CustomExceptionType.UNAUTHORIZED_ERROR);
     }
     //服务器，模拟用户输入数据导致的校验异常
-//    public void userBizError(int input){
-//        if (input <=0){
+    public void userBizError(int input){
+        if (input <=0){
 //            throw new CustomException(CustomExceptionType.USE_INPUT_ERROR, MsgConsts.INPUT_ERROR);
-//        }
-//    }
+            throw new CustomException(CustomExceptionType.UNAUTHORIZED_ERROR);
+        }
+    }
     //服务器,模拟参数异常
     public Article getArticle(int id){
         //模拟业务校验失败逻辑

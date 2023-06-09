@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>websocket-demo</title>
+</head>
+<body>
+<div id="app">
+  <div>
+    <input placeholder="请输入id" v-model="id">
+    <button @click="open">连接 websocket</button>
+  </div>
+  <div>
+    <input placeholder="请输入消息" v-model="content">
+    <button @click="send" :disable="disable">发送消息</button>
+  </div>
+  <button @click="close">关闭连接</button>
+  <div>
+    {{ message }}
+  </div>
+</div>
+<script src="https://unpkg.com/vue@3/dist/vue.global.js"></script>
+<script src="./main.js"></script>
+<script>
+  //挂载app
+  const mountedApp = app.mount("#app")
+</script>
+</body>
+</html>

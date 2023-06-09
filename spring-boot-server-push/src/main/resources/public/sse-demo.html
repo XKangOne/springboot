@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>sse-demo</title>
+</head>
+<body>
+<div id="msg-box">
+    2023-4-17 17:55:15 当前股票价格为44元
+</div>
+
+<script>
+    //兼容性判断
+    if (typeof (EventSource) !=="undefined"){
+    // if (!! window.EventSource){
+        //指定请求路由
+            let source = new EventSource("http://localhost:8080/sse/msg")
+            // source.onmessage = (event) =>{
+            //     document.getElementById("msg-box").innerHTML = event.data
+            // }
+
+        source.onmessage = (event) =>{
+            document.getElementById("msg-box").innerHTML = event.data
+        }
+        //当连接正式建立时触发
+        source.onopen = (e) =>{
+           console.log(e)
+        }
+        //监听信息的传输
+        source.onmessage = (e) =>{
+            console.log(e)
+            //e.origin:服务器端URL的域名部分,有protocol,hostname,port
+            console.log(e.origin)
+            //e.data:服务器端传回的数据
+            console.log(e.data)
+            document.getElementById("msg-box").innerHTML = e.data
+            if (!e.data){
+                //数据传输完毕，无数据时关闭连接
+                source.close()
+            }
+        }
+        //当连接发生error时触发
+        source.onerror = (e) =>{
+            console.log(e);
+        };
+        let msg = ''
+        //打开连接
+        source.addEventListener('open',()=>{
+            console.log('打开连接...')
+        },false)
+        //接收消息
+        source.addEventListener('message',(res)=>{
+            console.log(res)
+        })
+        //错误
+        source.addEventListener('error',(error)=>{
+            console.log(error)
+        },false)
+    }else {
+        alert('当前浏览器不支持sse')
+    }
+</script>
+</body>
+</html>

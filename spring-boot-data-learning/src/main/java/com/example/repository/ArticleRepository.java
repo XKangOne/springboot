@@ -7,9 +7,6 @@ import org.springframework.data.jpa.repository.JpaRepository;
 /***
  * @description:
  * @author: yk
- * @date:
- * @param:
- * @return:
  **/
 public interface ArticleRepository extends JpaRepository<Article,Integer> {
 }

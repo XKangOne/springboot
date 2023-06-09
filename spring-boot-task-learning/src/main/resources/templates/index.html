@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<img src="/static/image/qrcode.jpg"/>
+<!--    <img th:src="@{/image/qrcode.jpg}">-->
+    <script>
+        const xhttp = new XMLHttpRequest();
+        setTimeout(function (){
+            //访问接口
+            xhttp.open('GET','http://localhost:8080/get',true)
+            xhttp.send();
+            window.location.reload();
+        },1000);
+    </script>
+</body>
+</html>

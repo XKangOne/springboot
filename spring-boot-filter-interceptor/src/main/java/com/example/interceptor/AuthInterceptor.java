@@ -21,25 +21,25 @@ public class AuthInterceptor implements HandlerInterceptor {
     public boolean preHandle(HttpServletRequest request, HttpServletResponse response, Object handler) throws Exception {
         String requestURI = request.getRequestURI();
         log.info("拦截的请求路径是{}",requestURI);
-       //在请求处理之前进行权限校验
-        String token = request.getHeader("Authorization");
-        if (token != null){
-            if ("Admin123".equals(token)){
-                //权限校验通过，放行请求
-                return true;
-            }else {
-            //token 错误，校验失败，返回401错误码
-                response.setStatus(HttpServletResponse.SC_UNAUTHORIZED);
-                return false;
-            }
-        }else {
-//            request.setAttribute("msg","请重新登录");
-//            request.getRequestDispatcher("/").forward(request,response);
-            //token为空,返回401错误码
-            response.setStatus(HttpServletResponse.SC_UNAUTHORIZED);
-            return false;
-        }
-//        return true;
+//       //在请求处理之前进行权限校验
+//        String token = request.getHeader("Authorization");
+//        if (token != null){
+//            if ("Admin123".equals(token)){
+//                //权限校验通过，放行请求
+//                return true;
+//            }else {
+//            //token 错误，校验失败，返回401错误码
+//                response.setStatus(HttpServletResponse.SC_UNAUTHORIZED);
+//                return false;
+//            }
+//        }else {
+////            request.setAttribute("msg","请重新登录");
+////            request.getRequestDispatcher("/").forward(request,response);
+//            //token为空,返回401错误码
+//            response.setStatus(HttpServletResponse.SC_UNAUTHORIZED);
+//            return false;
+//        }
+        return true;
     }
 
     @Override

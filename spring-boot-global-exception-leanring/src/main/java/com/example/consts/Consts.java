@@ -3,9 +3,6 @@ package com.example.consts;
 /***
  * @description:
  * @author: yk
- * @date:
- * @param:
- * @return:
  **/
 public interface Consts {
     //code 常量维护

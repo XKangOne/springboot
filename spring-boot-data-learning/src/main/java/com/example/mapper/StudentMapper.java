@@ -13,9 +13,6 @@ import java.util.List;
 /***
  * @description:
  * @author: yk
- * @date:
- * @param:
- * @return:
  **/
 public interface StudentMapper {
     Student selectManyToOne(Integer studentId);
@@ -42,6 +39,10 @@ public interface StudentMapper {
     List<Student> dynamicSelect(Student student);
 
     List<Student> getStudent(Student student);
+
+    /**
+     * @description 使用注解的开发方式
+    */
     /**
      * @description 根据主键查询学生信息
      * @param: studentId 学生id

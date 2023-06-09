@@ -78,7 +78,9 @@ class StudentMapperTest {
         Student student = new Student();
         student.setStudentId(1001);
         List<Student> student1 = studentMapper.getStudent(student);
-        System.out.println(student1);
+//        System.out.println(student1);
+        //这样也可以
+        student1.forEach(System.out::println);
     }
 
     @Test

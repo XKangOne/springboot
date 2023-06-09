@@ -1,4 +1,0 @@
-GET http://localhost:8099/api/ariticles/2
-Accept: application/json
-
-###

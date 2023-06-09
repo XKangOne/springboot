@@ -7,6 +7,5 @@ import com.example.domain.Clazz;
  * @author: yk
  **/
 public interface ClazzMapper {
-
     Clazz selectOneToMany(Integer clazzId);
 }

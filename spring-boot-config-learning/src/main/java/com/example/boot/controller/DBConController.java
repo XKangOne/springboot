@@ -8,9 +8,6 @@ import org.springframework.web.bind.annotation.RestController;
 /***
  * @description:
  * @author: yk
- * @date:
- * @param:
- * @return:
  **/
 @RestController
 @AllArgsConstructor

@@ -1,0 +1,6 @@
+context:
+  listener:
+    classes: com.example.listen.MyListener3
+
+server:
+  port: 8888

@@ -9,9 +9,6 @@ import static org.junit.jupiter.api.Assertions.*;
 /***
  * @description:
  * @author: yk
- * @date:
- * @param:
- * @return:
  **/
 @SpringBootTest
 class ClazzMapperTest {

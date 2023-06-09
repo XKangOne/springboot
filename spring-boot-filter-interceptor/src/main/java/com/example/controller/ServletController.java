@@ -9,12 +9,26 @@ import org.springframework.web.context.request.RequestContextListener;
 import org.springframework.web.context.request.ServletRequestAttributes;
 
 /***
- * @description:
- * @author: yk
- * @date:
- * @param:
- * @return:
- **/
+ /**
+ HttpServletRequest 对象获取的4种方法
+ 1、直接在参数中传递
+ public String hello(HttpServletRequest request)
+
+ 2、通过ServletActionContext获取
+
+ HttpServletRequest request = ServletActionContext.getRequest();
+
+ 3、通过注解获取（Spring）
+
+ public class Hello {
+@Autowired
+HttpServletRequest request; //这里可以获取到request
+}
+
+ 4、RequestContextHolder获取（Spring）
+
+ HttpServletRequest request = ((ServletRequestAttributes)RequestContextHolder.getRequestAttributes()).getRequest();
+ */
 @RestController
 @RequestMapping("api")
 public class ServletController {

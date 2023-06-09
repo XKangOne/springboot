@@ -6,7 +6,7 @@ import org.springframework.context.annotation.Configuration;
 import org.springframework.context.annotation.PropertySource;
 
 /***
- * @description:
+ * @description: 阿里云镜像
  * @author: yk
  **/
 @Configuration

@@ -12,9 +12,6 @@ import java.util.List;
 /***
  * @description:
  * @author: yk
- * @date:
- * @param:
- * @return:
  **/
 @Data
 @AllArgsConstructor
@@ -28,7 +25,5 @@ public class Student {
     private LocalDate birthday;
     //在多方中声明一方的对象
     private Clazz clazz;
-
     private List<Course> course;
-
 }

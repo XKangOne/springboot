@@ -18,9 +18,6 @@ import static org.springframework.data.domain.ExampleMatcher.GenericPropertyMatc
 /***
  * @description:
  * @author: yk
- * @date:
- * @param:
- * @return:
  **/
 @SpringBootTest
 class DiscussRepositoryTest {
@@ -44,6 +41,7 @@ class DiscussRepositoryTest {
         list.forEach(System.out::println);
     }
 
+    //全部查询
     @Test
     void findByAIdEquals(){
         List<Discuss> list= discussRepository.findByAIdEquals(1);

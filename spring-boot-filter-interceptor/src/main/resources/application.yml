@@ -1,5 +1,2 @@
 server:
-  port: 8888
-context:
-  listener:
-    classes: com.example.event.MyListener3
+  port: 8880

@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<configuration status="warn">
+    <appenders>
+        <Console name="Console" target="SYSTEM_OUT">
+            <PatternLayout
+                    pattern="[%style{%d}{bright,yellow}][%highlight{%p}][%style{%t}{bright,blue}][%style{%C}{bright,cyan}]: %msg%n%style{%throwable}{red}"
+                    disableAnsi="false" noConsoleNoAnsi="false"/>
+        </Console>
+
+        <RollingFile name="RollingFile" fileName="E:\SpringBoot\logs\boot.log"
+                     filePattern="${user.home}/logs/application-%d{yyyy-MM-dd}.log.gz"
+                     ignoreExceptions="false">
+            <PatternLayout>
+                <pattern>%d %p %c{1.} [%t] %m%n</pattern>
+            </PatternLayout>
+
+            <Policies>
+                <TimeBasedTriggeringPolicy />
+                <SizeBasedTriggeringPolicy size="100 MB"/>
+            </Policies>
+        </RollingFile>
+    </appenders>
+
+    <loggers>
+        <root level="debug">
+            <appender-ref ref="Console" level="info" />
+            <appender-ref ref="RollingFile" level="debug" />
+        </root>
+    </loggers>
+</configuration>
